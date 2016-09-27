@@ -1,3 +1,9 @@
+var createUl = function( className ) {
+  var ul = document.createElement( "ul" );
+  ul.classList.add( className );
+  return ul;
+} 
+
 var addCat = function( name, favFood, imgUrl ) {
   var catUl = createUl( "cat" );
   var nameLi = createLi( name );
