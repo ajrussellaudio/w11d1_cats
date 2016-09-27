@@ -1,3 +1,9 @@
+var createLi = function( text ) {
+  var li = document.createElement( "li" );
+  li.innerText = text;
+  return li;
+}
+
 var createUl = function( className ) {
   var ul = document.createElement( "ul" );
   ul.classList.add( className );
