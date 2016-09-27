@@ -5,9 +5,9 @@ var createImg = function( srcUrl ) {
   return img;
 }
 
-var createLi = function( text ) {
+var createLi = function( label, text ) {
   var li = document.createElement( "li" );
-  li.innerText = text;
+  li.innerText = label + ": " + text;
   return li;
 }
 
@@ -27,8 +27,8 @@ var createCat = function( target, parent, children ) {
 
 var addCat = function( name, favFood, imgUrl ) {
   var catUl = createUl( "cat" );
-  var nameLi = createLi( name );
-  var favFoodLi = createLi( favFood );
+  var nameLi = createLi( "Name", name );
+  var favFoodLi = createLi( "Favourite Food", favFood );
   var catImg = createImg( imgUrl );
   createCat( "cats", catUl, [ nameLi, favFoodLi, catImg ] )
 }
